@@ -1,6 +1,5 @@
 
 import { ButtonHTMLAttributes } from "react";
-import { Container } from "./styles"
 
 type SubmitButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {  
   children: string;  
@@ -8,11 +7,11 @@ type SubmitButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export const SubmitButton = ({ children, ...rest }: SubmitButtonProps) => {
   return (
-    <Container
+    <button
       type="submit"
       {...rest}            
     >
       {children}
-    </Container>
+    </button>
   )
 }

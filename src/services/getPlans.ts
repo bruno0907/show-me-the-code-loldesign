@@ -1,6 +1,7 @@
-import plans from "../utils/plans"
+import { api } from "../infra/api"
+import { Plan } from "../types"
 
-export const getPlans = () => {
-  const result = [...plans]
-  return result
+export const getPlans = async (): Promise<Plan[]> => {
+  const { data } = await api.get('/api/plans')
+  return data
 }

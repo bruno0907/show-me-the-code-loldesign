@@ -1,12 +1,12 @@
 # TODO
 
-[] FEAT: Select method to plans from plan list
-[] REFACT: Separate origins code from destination code
-[] REFACT: Rename plan state from state to a more suitable name (**HARD STUFF**)
-[] FEAT: Rule to remove selected origin code from destination code select
-[] FEAT: Tests to list of plans component
-[] REFACT: fetchPlanResult method calling. Change to a form submission
-[] REFACT fetching methods to assyncronism
+[x] FEAT: Select method to plans from plan list
+[x] REFACT: Separate origins code from destination code
+[x] REFACT: Rename plan state from state to a more suitable name (**HARD STUFF**)
+[x] FEAT: Rule to remove selected origin code from destination code select
+[x] FEAT: Tests to list of plans component
+[x] REFACT: fetchPlanResult method calling. Change to a form submission
+[x] REFACT fetching methods to assyncronism
 
 [] Review project before continue
 

@@ -1,31 +1,17 @@
 import { getPlans } from "./getPlans"
+import AxiosMock from 'axios-mock-adapter'
+import { api } from "../infra/api"
+import plans from "../utils/plans"
+
+const axiosMock = new AxiosMock(api)
 
 describe('getPlans', () => {
-  it('should return a list plans', () => {
-    const result = getPlans()
-
-    expect(result).toStrictEqual([
-      {    
-        id: 'planId01',
-        name: 'FaleMais30',
-        description: 'No plano FaleMais30 você ganha 30 minutos de franquia para falar de graça com qualquer DDD.',
-        tolerance: 30, 
-        slug: 'fale_mais_30',
-      },
-      {
-        id: 'planId02',
-        name: 'FaleMais60',
-        description: 'No plano FaleMais60 você ganha 60 minutos de franquia para falar de graça com qualquer DDD.',
-        tolerance: 60,
-        slug: 'fale_mais_60',
-      },
-      {
-        id: 'planId03',
-        name: 'FaleMais120',
-        description: 'No plano FaleMais120 você ganha 120 minutos de franquia para falar de graça com qualquer DDD.',
-        tolerance: 120,
-        slug: 'fale_mais_120',
-      },
-    ])
+  beforeEach(() => {
+    axiosMock.reset()    
+  })
+  it('should return a list plans', async () => {
+    axiosMock.onGet('/api/plans').reply(200, plans)
+    const result = await getPlans()
+    expect(result).toEqual(plans)
   })
 })

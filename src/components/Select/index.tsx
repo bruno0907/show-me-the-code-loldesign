@@ -1,5 +1,5 @@
 import { forwardRef, ForwardRefRenderFunction, ReactNode, SelectHTMLAttributes } from "react";
-import { Label, Container } from "./styles";
+
 
 type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
   name: string;
@@ -9,19 +9,22 @@ type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
 
 const Component: ForwardRefRenderFunction<HTMLSelectElement, SelectProps> = ({ label, name, children, ...rest }, ref) => {
   return (
-    <>
-      <Label htmlFor={name}>{label}</Label>
-
-      <Container
+    <div className="p-6 flex flex-col bg-zinc-50 rounded-lg shadow">
+      <label 
+        htmlFor={name}
+        className="mb-2"
+      >{label}</label>
+      <select        
         id={name}
         name={name}
         data-testid={name}
         ref={ref}
+        className="rounded-lg border-2 border-blue-400"
         {...rest}
       >
         {children}
-      </Container>
-    </>
+      </select>
+    </div>
   )
 }
 

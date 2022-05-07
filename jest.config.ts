@@ -7,9 +7,11 @@ const createJestConfig = nextJest({
 })
 
 // Add any custom config to be passed to Jest
-const customJestConfig = {
+const customJestConfig = {  
   clearMocks: true,
-  setupFilesAfterEnv: ['<rootDir>/tests/setupTests.ts'],  
+  collectCoverage: true,
+  coverageDirectory: '<rootDir>/coverage',
+  setupFilesAfterEnv: ['<rootDir>jest.setup.ts'],  
   testEnvironment: 'jest-environment-jsdom',
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': '<rootDir>/node_modules/babel-jest'

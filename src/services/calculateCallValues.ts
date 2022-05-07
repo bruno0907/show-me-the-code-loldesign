@@ -1,8 +1,4 @@
-type CalculateCallValues = {
-  callDuration: number;
-  planFee: number;
-  planTolerance: number;
-}
+import { CalculateCallValues } from "../types"
 
 export const calculateCallValues = ({ callDuration, planFee, planTolerance }: CalculateCallValues) => {
   const callCharge = callDuration * planFee
