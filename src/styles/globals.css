@@ -3,13 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-200 text-zinc-600
-}
-
-label {
-  @apply font-semibold
-}
-
-select {
-  @apply text-zinc-700 font-semibold
+  @apply bg-zinc-100 text-zinc-800 font-sans
 }

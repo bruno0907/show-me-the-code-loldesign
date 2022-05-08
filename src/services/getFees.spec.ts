@@ -1,5 +1,5 @@
 import { getFees } from "./getFees"
-import fees from "../utils/fees"
+import fees from "../utils/fees.json"
 import AxiosMock from 'axios-mock-adapter'
 import { api } from "../infra/api"
 

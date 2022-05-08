@@ -1,28 +1,26 @@
 import { GetStaticProps } from "next";
-import Home from "../components/Pages/Home";
+import { HomePage } from "../components/Pages/Home";
 import { getFees } from "../services/getFees";
 import { getPlans } from "../services/getPlans";
 import { Fee, Plan } from "../types";
 
-type Props = {
-  plans: Plan[];
+type HomeProps = {
   fees: Fee[];
+  plans: Plan[];
 }
 
-export default function Index({ plans, fees }: Props) {
-  return (
-    <Home plans={plans} fees={fees} />
-  )
+export default function Index({ fees, plans }: HomeProps) {
+  return <HomePage fees={fees} plans={plans} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const fees = await getFees()
   const plans = await getPlans()
-  const fees = await getFees()   
-
+  
   return {
     props: {
-      plans,
-      fees
+      fees,
+      plans
     }
   }
 }

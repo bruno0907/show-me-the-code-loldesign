@@ -1,7 +1,7 @@
 import { getPlans } from "./getPlans"
 import AxiosMock from 'axios-mock-adapter'
 import { api } from "../infra/api"
-import plans from "../utils/plans"
+import plans from "../utils/plans.json"
 
 const axiosMock = new AxiosMock(api)
 

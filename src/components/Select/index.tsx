@@ -9,17 +9,17 @@ type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
 
 const Component: ForwardRefRenderFunction<HTMLSelectElement, SelectProps> = ({ label, name, children, ...rest }, ref) => {
   return (
-    <div className="p-6 flex flex-col bg-zinc-50 rounded-lg shadow">
+    <div className="flex flex-col flex-1 justify-center">
       <label 
         htmlFor={name}
-        className="mb-2"
+        className="mb-2 leading-none text-zinc-600 font-medium"
       >{label}</label>
       <select        
         id={name}
         name={name}
         data-testid={name}
         ref={ref}
-        className="rounded-lg border-2 border-blue-400"
+        className="font-medium rounded-lg border-2 border-zinc-600 text-zinc-600"
         {...rest}
       >
         {children}

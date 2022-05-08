@@ -1,4 +1,4 @@
-import fees from "../utils/fees"
+import fees from "../utils/fees.json"
 import { getCodes } from "./getCodes"
 
 describe('getCodes', () => {

@@ -1,4 +1,3 @@
-import { waitFor } from '@testing-library/react'
 import AxiosMock from 'axios-mock-adapter'
 import { api } from '../infra/api'
 import { fetchPlanResult } from './fetchPlanResult'

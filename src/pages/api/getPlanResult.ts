@@ -13,7 +13,7 @@ export default function handler(request: NextApiRequest, response: NextApiRespon
 
   return response.status(200).json({
     planName,
-    withPlan: Intl.NumberFormat('pt-br', { currency: 'BRL' }).format(withPlan),
-    withoutPlan: Intl.NumberFormat('pt-br', { currency: 'BRL' }).format(withoutPlan)
+    withPlan: Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(withPlan),
+    withoutPlan: Intl.NumberFormat('pt-br', { style: 'currency', currency: 'BRL' }).format(withoutPlan)
   })
 }
