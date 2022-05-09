@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import fees from "../../utils/fees";
+import fees from "../../utils/fees.json";
 
 export default async function handler(request: NextApiRequest, response: NextApiResponse) {
   const data = [...fees]  

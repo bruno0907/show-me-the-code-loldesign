@@ -1,31 +1,37 @@
-# TODO
+## Desafio Front-end FaleMais - Telzir by LOLDESIGN 🚀
 
-[x] FEAT: Select method to plans from plan list
+### MADE WITH
+- NextJS as Framework of choice
+- TailwindCSS as Styling Lib
+- Jest as Testing unit
 
-[x] REFACT: Separate origins code from destination code
+### TO TEST IT LOCALLY
+Clone the repository
 
-[x] REFACT: Rename plan state from state to a more suitable name (**HARD STUFF**)
+#### TO CLONE THE REPOSITORY
+´git clone https://github.com/bruno0907/telzir.git´
 
-[x] FEAT: Rule to remove selected origin code from destination code select
+#### TO INSTALL DEPENDENCIES
+`yarn` or `npm install`
 
-[x] FEAT: Tests to list of plans component
+### TO RUN THE PROJECT
+`yarn dev` or `npm run dev` 
+then follow terminal instructions or goto http://localhost:3000
 
-[x] REFACT: fetchPlanResult method calling. Change to a form submission
+#### TO RUN TESTS
+`yarn test` or `npm run tests`
 
-[x] REFACT fetching methods to assyncronism
-
-[x] Review project before continue
-
-[-] FEAT: Add styles to project (*ON GOING*)
-
-[x] FEAT: Add a simple land page to handle presentation
-
-[x] REFACT: Move plan calculation page to its own page
-
-[] Review project before continue
-
-[] AVALIATE: Necessity of using MirageJS to handle data for fees and plans
-
-[] FEAT: unit tests to data fetching methods
-
-[] Review project and necessity of aditional features
+#### TODO / DONE
+- [x] FEAT: Select method to plans from plan list
+- [x] REFACT: Separate origins code from destination code
+- [x] REFACT: Rename plan state from state to a more suitable name (**HARD STUFF**)
+- [x] FEAT: Rule to remove selected origin code from destination code select
+- [x] FEAT: Tests to list of plans component
+- [x] REFACT: fetchPlanResult method calling. Change to a form submission
+- [x] REFACT fetching methods to assyncronism
+- [x] Review project before continue
+- [x] FEAT: Add styles to project
+- [x] FEAT: Add a simple land page to handle presentation
+- [x] REFACT: Move plan calculation page to its own page
+- [x] FEAT: unit tests to data fetching methods
+- [x] Review project and necessity of aditional features

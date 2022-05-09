@@ -11,7 +11,7 @@ type SliderProps = InputHTMLAttributes<HTMLInputElement> & {
 
 const Component: ForwardRefRenderFunction<HTMLInputElement, SliderProps> = ({ name, label, min, max, value, onChange, ...rest }, ref) => {
   return (
-    <div className="flex flex-col flex-1 justify-center">
+    <div className="w-full flex flex-col justify-center">
       <label htmlFor={name} className="mb-4 font-semibold leading-none text-zinc-600">{label}</label>      
       <span className="flex flex-1 items-center justify-between">
         <span className="text-sm font-semibold">{min}</span>

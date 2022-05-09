@@ -1,0 +1,6 @@
+[
+  { "name": "Home", "href": "#", "current": true },
+  { "name": "Planos", "href": "#", "current": false },
+  { "name": "Contato", "href": "#", "current": false },    
+  { "name": "Contratar", "href": "#", "current": false }  
+]
