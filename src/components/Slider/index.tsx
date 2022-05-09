@@ -27,7 +27,7 @@ const Component: ForwardRefRenderFunction<HTMLInputElement, SliderProps> = ({ na
         max={max}
         value={value}
         onChange={onChange}
-        className="text-zinc-600"        
+        className="text-zinc-600 focus:outline-blue-600"        
         {...rest}
       />
     </div>

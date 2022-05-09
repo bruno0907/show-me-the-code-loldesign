@@ -30,7 +30,7 @@ export const Header = () => {
                   <Disclosure.Panel className="absolute flex flex-col w-full top-16 left-0 sm:hidden bg-zinc-600">                  
                     <div>
                       {navigation.map((link) => (
-                        <Link key={link.name} href={link.href}>
+                        <Link key={link.name} href={link.href} passHref>
                           <Disclosure.Button                          
                             className={classNames(link.current 
                               ? 'bg-yellow-400 text-zinc-600 font-medium'
@@ -51,22 +51,20 @@ export const Header = () => {
                   <Logo />
 
                   {/* LargeMenuStart */}
-                  <div className="hidden sm:block sm:ml-6">
-                    <div className="flex space-x-4">
-                      {navigation.map((link) => (
-                        <Link key={link.name} href={link.href} passHref>
-                          <a className={classNames(link.current 
-                              ? 'bg-yellow-400 text-zinc-600' 
-                              : 'text-zinc-600 hover:bg-yellow-400 hover:text-zinc-600',
-                              'px-3 py-2 rounded-md text-sm font-medium'
-                            )}
-                            aria-current={link.current ? 'page' : undefined}
-                          >
-                            {link.name}
-                          </a>
-                        </Link>
-                      ))}
-                    </div>
+                  <div className="w-full hidden sm:flex sm:gap-2 md:gap-4 sm:items-center sm:justify-end sm:ml-6">                    
+                    {navigation.map((link) => (
+                      <Link key={link.name} href={link.href} passHref>
+                        <a className={classNames(link.current 
+                            ? 'bg-yellow-400 text-zinc-600 last:ml-auto' 
+                            : 'text-zinc-600 hover:bg-yellow-400 hover:text-zinc-600',
+                            'py-3 px-6 rounded-lg text-sm font-medium first:ml-auto last:ml-auto last:bg-yellow-400 hover:last:bg-yellow-300'
+                          )}
+                          aria-current={link.current ? 'page' : undefined}
+                        >
+                          {link.name}
+                        </a>
+                      </Link>
+                    ))}                    
                   </div>
                   {/* LargeMenuEnd */}
                 </div>              

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ForwardRefRenderFunction } from "react"
+import { ImArrowRight2 } from 'react-icons/im'
 
 export const CallToAction = () => {
   return (    
@@ -13,8 +13,8 @@ export const CallToAction = () => {
           </a>
         </Link>
         <Link href="#">
-          <a className="py-3 px-6 font-medium text-zinc-600 border-2 border-transparent bg-transparent flex flex-1 items-center justify-center rounded-lg hover:bg-yellow-400 transition">
-            Ver planos
+  <a className="py-3 px-6 font-medium text-zinc-600 bg-yellow-400 md:text-zinc-600 border-2 border-transparent md:bg-transparent flex flex-1 items-center justify-center rounded-lg hover:bg-yellow-400 transition">
+            Ver planos <ImArrowRight2 className="ml-1" />
           </a>
         </Link>
       </div>

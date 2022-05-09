@@ -9,12 +9,14 @@
 Clone the repository
 
 #### TO CLONE THE REPOSITORY
-´git clone https://github.com/bruno0907/telzir.git´
+`git clone https://github.com/bruno0907/telzir.git`
 
 #### TO INSTALL DEPENDENCIES
+Navigate to the project folder and run one of the following commands:
 `yarn` or `npm install`
 
 ### TO RUN THE PROJECT
+Inside project folder run one of the commands below to start the development environment
 `yarn dev` or `npm run dev` 
 then follow terminal instructions or goto http://localhost:3000
 

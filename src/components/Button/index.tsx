@@ -1,8 +1,8 @@
 
-import { ButtonHTMLAttributes, forwardRef, ForwardRefRenderFunction } from "react";
+import { ButtonHTMLAttributes, forwardRef, ForwardRefRenderFunction, ReactNode } from "react";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {    
-  children: string;  
+  children: string | ReactNode;  
   type?: "button" | "submit" | "reset";
 }
 
